@@ -1,0 +1,55 @@
+
+:root {
+  /* --v-Fail: rgb(253, 199, 199); */
+  --v-Fail: rgb(253, 218, 218);
+  /* --v-Pass: rgb(212, 255, 187); */
+  --v-Pass: rgb(221, 250, 232);
+  --background: rgb(48, 122, 184);
+  --container: rgb(247, 247, 252);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--container);
+
+}
+
+h2 {
+  margin: 0px 0px 20px;
+  align-self: center;
+}
+
+.form-group {
+  height: 90px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+}
+
+.validation-passed {
+  border: 1px solid green;
+}
+
+.validation-failed {
+  border: 1px solid rgb(248, 104, 104);
+}
+
+#emailError, #pswError {
+  color:rgb(109, 109, 109);
+  font-size: .9em;
+}
+
