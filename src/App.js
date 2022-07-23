@@ -6,32 +6,20 @@ function App() {
   let [submitSuccessful, setSubmitSuccessful] = useState(false);
   let [emailClass, setEmailClass] = useState();
   let [passwordClass, setPasswordClass] = useState();
-  
 
-  // TODO: add a const called formik assigned to useFormik()
-
-  // const attemptSubmit = () => {
-  //   setSubmitAttempted(true);
-  // };
   const updateBackgroundColor = (color) => {
     document.body.style.backgroundColor = color;
-  }
+  };
 
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
-    onSubmit: (values) => {
-      // console.log(values);
-      // console.log(`gv: ${submitSuccessful}`);
-      alert("Login Successful!");
+    onSubmit: () => {
       setSubmitSuccessful(true);
       updateBackgroundColor("#105736");
-      
-       //'#198754';
-      // setSubmitAttempted(true);
-      
+      alert("Login Successful!");
     },
     validateOnChange: submitAttempted,
     validateOnBlur: true,
@@ -64,9 +52,7 @@ function App() {
   return (
     <div className="login-container">
       <h2>Sign In</h2>
-      <form
-        onSubmit={formik.handleSubmit}
-      >
+      <form onSubmit={formik.handleSubmit}>
         <div className="form-group">
           <label>Email</label>
           <input
@@ -108,7 +94,7 @@ function App() {
             id="submitBtn"
             className={submitSuccessful ? "btn btn-success" : "btn btn-primary"}
             type="submit"
-            onClick={() => setSubmitAttempted(true)} //{attemptSubmit}
+            onClick={() => setSubmitAttempted(true)}
             disabled={submitSuccessful}
           >
             {submitSuccessful ? <>&#10003; Success</> : "Sign In"}

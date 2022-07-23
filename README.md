@@ -13,4 +13,4 @@ To run...
 Includes the following additional features:
 * Bootstrap styling
 * Form validation styling
-* Logic to update UI on succsessful submission
+* Logic to update UI on successful submission
